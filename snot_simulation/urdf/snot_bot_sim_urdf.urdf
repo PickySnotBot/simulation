@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="snot_bot">
+  
+  <link
+    name="base_link">
+    <visual>
+      <origin
+        xyz="0 0 0.5"
+        rpy="0 0 0" />
+      <geometry>
+          <cylinder length="0.1" radius="0.05"/>
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <cylinder length="0.1" radius="0.05"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <!-- Left Front Wheel -->
+  <link
+    name="snot_left_front_wheel">
+    <inertial>
+      <origin
+        xyz="0 -0.0185 2.1684E-19"
+        rpy="0 0 0" />
+      <mass
+        value="0.18412" />
+      <inertia
+        ixx="9.5391E-05"
+        ixy="-6.5292E-23"
+        ixz="1.6664E-21"
+        iyy="0.00014877"
+        iyz="2.4485E-23"
+        izz="9.5391E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 1.5708 1.5708" /> <!-- Rotated along x-axis -->
+      <geometry>
+        <cylinder length="0.08" radius="0.1"/> <!-- Corrected diameter to 0.08m -->
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 1.5708 1.5708" /> <!-- Rotated along x-axis -->
+      <geometry>
+        <cylinder length="0.08" radius="0.1"/> <!-- Corrected diameter to 0.08m -->
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="snot_left_front_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0.12982 0.229 0.0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="snot_left_front_wheel" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+
+  <!-- Left Rear Wheel -->
+  <link
+    name="snot_left_rear_wheel">
+    <inertial>
+      <origin
+        xyz="6.9389E-18 -0.0185 -1.5179E-18"
+        rpy="0 0 0" />
+      <mass
+        value="0.18412" />
+      <inertia
+        ixx="9.5391E-05"
+        ixy="6.5292E-23"
+        ixz="1.9598E-21"
+        iyy="0.00014877"
+        iyz="6.6753E-21"
+        izz="9.5391E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 1.5708 1.5708" /> <!-- Rotated along x-axis -->
+      <geometry>
+        <cylinder length="0.08" radius="0.1"/> <!-- Corrected diameter to 0.08m -->
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 1.5708 1.5708" /> <!-- Rotated along x-axis -->
+      <geometry>
+        <cylinder length="0.08" radius="0.1"/> <!-- Corrected diameter to 0.08m -->
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="snot_left_rear_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="-0.12983 0.229 0.0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="snot_left_rear_wheel" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+
+  <!-- Right Rear Wheel -->
+  <link
+    name="snot_right_rear_wheel">
+    <inertial>
+      <origin
+        xyz="3.4694E-18 0.0185 2.6021E-18"
+        rpy="0 0 0" />
+      <mass
+        value="0.18412" />
+      <inertia
+        ixx="9.5391E-05"
+        ixy="-2.122E-21"
+        ixz="1.2911E-22"
+        iyy="0.00014877"
+        iyz="6.5356E-21"
+        izz="9.5391E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 1.5708 1.5708" /> <!-- Rotated along x-axis -->
+      <geometry>
+        <cylinder length="0.08" radius="0.1"/> <!-- Corrected diameter to 0.08m -->
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 1.5708 1.5708" /> <!-- Rotated along x-axis -->
+      <geometry>
+        <cylinder length="0.08" radius="0.1"/> <!-- Corrected diameter to 0.08m -->
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="snot_right_rear_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="-0.12983 -0.229 0.0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="snot_right_rear_wheel" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+
+  <!-- Right Front Wheel -->
+  <link
+    name="snot_right_front_wheel">
+    <inertial>
+      <origin
+        xyz="0 0.0185 2.3852E-18"
+        rpy="0 0 0" />
+      <mass
+        value="0.18412" />
+      <inertia
+        ixx="9.5391E-05"
+        ixy="-2.0893E-21"
+        ixz="-2.6085E-37"
+        iyy="0.00014877"
+        iyz="6.6672E-21"
+        izz="9.5391E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 1.5708 1.5708" /> <!-- Rotated along x-axis -->
+      <geometry>
+        <cylinder length="0.08" radius="0.1"/> <!-- Corrected diameter to 0.08m -->
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 1.5708 1.5708" /> <!-- Rotated along x-axis -->
+      <geometry>
+        <cylinder length="0.08" radius="0.1"/> <!-- Corrected diameter to 0.08m -->
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="snot_right_front_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0.12982 -0.229 0.0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="snot_right_front_wheel" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+
+
+
+
+
+
+  <link
+    name="snot_camera">
+    <inertial>
+      <origin
+        xyz="0.00047839 0.016521 -0.029048"
+        rpy="0 0 0" />
+      <mass
+        value="0.82085" />
+      <inertia
+        ixx="0.00040911"
+        ixy="5.4099E-06"
+        ixz="1.8347E-05"
+        iyy="0.0039182"
+        iyz="-3.0404E-05"
+        izz="0.0037595" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <cylinder length="0.1" radius="0.05"/>
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <cylinder length="0.1" radius="0.1"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="snot_camera_joint"
+    type="fixed">
+    <origin
+      xyz="0.143 0 0.10243"
+      rpy="1.5708 0 1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="snot_camera" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="snot_lidar">
+    <inertial>
+      <origin
+        xyz="0.0063461 -9.1926E-05 -0.022432"
+        rpy="0 0 0" />
+      <mass
+        value="1.3308" />
+      <inertia
+        ixx="0.00061492"
+        ixy="-8.0198E-07"
+        ixz="0.00015824"
+        iyy="0.0009607"
+        iyz="-3.0916E-06"
+        izz="0.0010982" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <cylinder length="0.1" radius="0.05"/>
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.25098 0.25098 0.25098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <cylinder length="0.1" radius="0.05"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="snot_lidar_joint"
+    type="fixed">
+    <origin
+      xyz="-0.00042039 0 0.22613"
+      rpy="0 0 3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="snot_lidar" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+
+
+
+
+  <gazebo>
+    <plugin name="differential_drive_controller" filename="libgazebo_ros_diff_drive.so">
+      <updateRate>50</updateRate> <!-- Matches MOTOR_CONTROL_DT -->
+
+      <!-- Use left_joint and right_joint for front wheels only -->
+      <left_joint>snot_left_front_wheel_joint</left_joint>
+      <right_joint>snot_right_front_wheel_joint</right_joint>
+      
+      <!-- Kinematics parameters -->
+      <wheel_separation>0.416</wheel_separation> <!-- Distance between left and right wheels -->
+      <wheel_diameter>0.2</wheel_diameter> <!-- Diameter of wheels -->
+      <wheel_acceleration>1.0</wheel_acceleration> <!-- Max wheel acceleration -->
+      <wheel_torque>20.0</wheel_torque> <!-- Max torque applied to wheels -->
+
+      <!-- Command and odometry topics -->
+      <command_topic>cmd_vel</command_topic> <!-- Command topic for velocity control -->
+      <odometry_topic>/odometry/wheel_encoders</odometry_topic> <!-- Odometry topic for publishing wheel encoders -->
+      <odometry_frame>odom</odometry_frame> <!-- Odometry frame -->
+      <robot_base_frame>base_link</robot_base_frame> <!-- Robot base frame -->
+      <publish_odom>true</publish_odom>
+      <publish_odom_tf>true</publish_odom_tf> 
+
+      <!-- Optional configuration -->
+      <publish_wheel_tf>true</publish_wheel_tf>
+      <publish_wheel_joint_state>true</publish_wheel_joint_state>
+      <legacyMode>false</legacyMode>
+    </plugin>
+  </gazebo>
+
+</robot>
+
+
+
